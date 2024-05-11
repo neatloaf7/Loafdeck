@@ -1,0 +1,41 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <!-- Shared -->
+  <PropertyGroup>
+    <SolutionDir />
+    <Version />
+    <Configuration />
+    <Platform />
+  </PropertyGroup>
+    
+  <!-- Items Compile Specific -->
+  <ItemGroup>
+    <SolutionFile Include="$(SolutionDir)\*.sln" />
+    <AssemblyInfoFile Include="$(SolutionDir)\**\AssemblyInfo.cs" />
+  </ItemGroup>
+  
+  <!-- Import the MSBuild Extension Pack -->
+  <Import Project="C:\Program Files\MSBuildExtensionPack\4.0\MSBuild.ExtensionPack.tasks"/>
+
+  <!-- Tagets -->
+  <Target Name="SetVersion">
+    <Message Text="*** SetVersionNumber Target Called" />
+    <Message Text="*** AssemblyInfoFile: @(AssemblyInfoFile)" />
+    <Message Text="*** AssemblyVersion: $(Version)" />
+    <Message Text="*** AssemblyFileVersion: $(Version)" />
+    
+    <MSBuild.ExtensionPack.Framework.AssemblyInfo
+      AssemblyInfoFiles="@(AssemblyInfoFile)"
+      AssemblyVersion="$(Version)"
+      AssemblyFileVersion="$(Version)"/>
+  </Target>
+   
+  <Target Name="Build" DependsOnTargets="SetVersion">
+    <Message Text="*** Build Target Called" />
+    <Message Text="*** SolutionDir: $(SolutionDir)" />
+    <Message Text="*** SolutionFile: @(SolutionFile)" />
+    <Message Text="*** Configuration: $(Configuration)" />
+
+    <MSBuild Projects="@(SolutionFile)" Properties="Configuration=$(Configuration);Platform=$(Platform)" Targets="Clean;Build" />
+  </Target>
+</Project>

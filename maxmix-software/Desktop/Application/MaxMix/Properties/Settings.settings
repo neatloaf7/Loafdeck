@@ -1,0 +1,42 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="MaxMix.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="DisplayNewSession" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="SleepWhenInactive" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="SleepAfterSeconds" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">5</Value>
+    </Setting>
+    <Setting Name="LoopAroundItems" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="AccelerationPercentage" Type="System.UInt32" Scope="User">
+      <Value Profile="(Default)">60</Value>
+    </Setting>
+    <Setting Name="DoubleTapTime" Type="System.UInt16" Scope="User">
+      <Value Profile="(Default)">150</Value>
+    </Setting>
+    <Setting Name="VolumeMinColor" Type="System.UInt32" Scope="User">
+      <Value Profile="(Default)">4294901760</Value>
+    </Setting>
+    <Setting Name="VolumeMaxColor" Type="System.UInt32" Scope="User">
+      <Value Profile="(Default)">4278190335</Value>
+    </Setting>
+    <Setting Name="MixChannelAColor" Type="System.UInt32" Scope="User">
+      <Value Profile="(Default)">4294901760</Value>
+    </Setting>
+    <Setting Name="MixChanneBColor" Type="System.UInt32" Scope="User">
+      <Value Profile="(Default)">4294902015</Value>
+    </Setting>
+    <Setting Name="StartupMode" Type="MaxMix.Services.Communication.DisplayMode" Scope="User">
+      <Value Profile="(Default)">MODE_OUTPUT</Value>
+    </Setting>
+    <Setting Name="UpgradeRequired" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
